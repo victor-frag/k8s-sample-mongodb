@@ -24,9 +24,6 @@ image: bitnami/mongodb:3.6.1-r0
 ## Kubernetes service type
 serviceType: ClusterIP
 
-nodeSelector:
-  cloud.google.com/gke-nodepool: default-pool
-
 ## Enable persistence using Persistent Volume Claims
 ## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
 ##
@@ -39,7 +36,7 @@ persistence:
   ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
   ##   GKE, AWS & OpenStack)
   ##
-  storageClass: ssd
+  storageClass:
   accessMode: ReadWriteOnce
   size: 8Gi
 
